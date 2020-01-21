@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: worker-Deployment
+spec:
+    replica: 1
+    selector:
+        matchLabels:
+            component: worker
+    template:
+        containers:
+            metadata:
+                component: worker
+            spec:
+                name: worker
+                image: stephengrider/multi-worker
