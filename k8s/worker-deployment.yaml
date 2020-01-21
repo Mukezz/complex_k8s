@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
     name: worker-Deployment
 spec:
-    replica: 1
+    replicas: 1
     selector:
         matchLabels:
             component: worker
