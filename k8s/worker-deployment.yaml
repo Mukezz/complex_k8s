@@ -8,9 +8,10 @@ spec:
         matchLabels:
             component: worker
     template:
-        containers:
-            metadata:
+        metadata:
+            labels:
                 component: worker
-            spec:
+        spec:
+            containers:
                 name: worker
                 image: stephengrider/multi-worker
