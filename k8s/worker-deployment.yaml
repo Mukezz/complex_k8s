@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: worker-Deployment
+    name: worker-deployment
 spec:
     replicas: 1
     selector:
@@ -13,5 +13,5 @@ spec:
                 component: worker
         spec:
             containers:
-                name: worker
-                image: stephengrider/multi-worker
+                - name: worker
+                  image: stephengrider/multi-worker
